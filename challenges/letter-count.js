@@ -31,3 +31,16 @@
 */
 
 // YOUR CODE HERE
+var letterCount = function(countThis) {
+  var stats = {};
+  var countThisNoCase = countThis.toLowerCase();
+  for (i=0; i<countThisNoCase.length; i++) {
+    var currentLetter = countThisNoCase[i];
+    if (stats[currentLetter] == undefined)  {
+          stats[currentLetter] =1;
+      } else {
+          stats[currentLetter]++
+      }
+  }
+  return stats;
+};
